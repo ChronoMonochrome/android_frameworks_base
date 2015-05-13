@@ -3479,11 +3479,11 @@ public class PhoneWindowManager implements WindowManagerPolicy {
     }
 
     private void startActivityAsUser(Intent intent, UserHandle handle) {
-        if (isUserSetupComplete()) {
+       // if (isUserSetupComplete()) {
             mContext.startActivityAsUser(intent, handle);
-        } else {
-            Slog.i(TAG, "Not starting activity because user setup is in progress: " + intent);
-        }
+       // } else {
+       //     Slog.i(TAG, "Not starting activity because user setup is in progress: " + intent);
+       // }
     }
 
     private SearchManager getSearchManager() {
